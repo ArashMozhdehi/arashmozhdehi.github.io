@@ -539,7 +539,7 @@
             var marker = L.marker([lat, lng], {icon: redIcon}).addTo(map);
           else
             var marker = L.marker([lat, lng], {icon: blackIcon}).addTo(map);
-          var popup = marker.bindPopup('The temprature in this location: ' + temp);
+          var popup = marker.bindPopup('The temperature in this location: ' + temp);
 				} catch (err) {
 					alert(err)
 				}
