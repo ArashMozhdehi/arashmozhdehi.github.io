@@ -4,6 +4,18 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <style>
 
+	#wrapper {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
+	#lmsg
+	 {
+		 text-align: center;
+	 }
+
+
 	#location {
 		text-align: center;
 	}
@@ -54,18 +66,16 @@
 		height: 100x;
 	}
 
-	@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
-
 	body {
+		text-align: center;
 		margin-left: auto;
 		margin-right: auto;
+		text-align: center;
 		background-position: center;
 		background-origin: content-box;
 		background-repeat: no-repeat;
 		background-size: cover;
 		min-height: 100vh;
-		text-align: center;
-		font-family: 'Noto Sans', sans-serif;
 	}
 
 	.text-center {
@@ -350,7 +360,7 @@
 </head>
 
 <body>
-	<h1>Lab 4's implementation</h1>
+	<div id="lmsg"><h1>Lab 4's implementation</h1></div><br>
 
 	<script type="text/javascript">
 		//ll
@@ -376,8 +386,10 @@
 			<input type="text" name="port">
 			<label>Port</label>
 		</div>
-		<button type="submit" name="connect" class="btn btn-primary">Start</button>
-		<button type="button" name="discon" onclick="disconnect()" class="btn btn-danger">End</button><br><br>
+		<div class="wrapper">
+			<button type="submit" name="connect" class="btn btn-primary">Start</button>
+			<button type="button" name="discon" onclick="disconnect()" class="btn btn-danger">End</button><br><br>
+		</div>
 	</form>
 	<hr style="border-top: 2px dashed rgb(47, 0, 255);">
 	<br>
@@ -386,7 +398,9 @@
 			<input type="text" name="Stopic">
 			<label>The topic to subscribe</label>
 		</div>
-		<button type="submit" name="submit" value="Subscribe" class="btn btn-info">Subscribe</button><br><br>
+		<div class="wrapper">
+			<button type="submit" name="submit" value="Subscribe" class="btn btn-info">Subscribe</button><br><br>
+		</div>
 	</form>
 	<br>
 	<form id="smessage" name="smessage" action="" onsubmit="return send_message()">
@@ -398,14 +412,18 @@
 			<input type="text" name="Ptopic">
 			<label>Topic to publish to</label>
 		</div>
-		<button class="btn btn-secondary" type="submit" value="Submit">Send</button><br><br>
+		<div class="wrapper">
+			<button class="btn btn-secondary" type="submit" value="Submit">Send</button><br><br>
+		</div>
 	</form><br><br>
 	Messages:
 	<div id="messages" class="alert alert-primary" role="alert">
 		Program Started
 	</div>
-	<h1>Publish your location and the temperature</h1>
-	<button class="btn btn-success" onclick="getlocation()">Share my status</button><br><br>
+	<div id="lmsg"><b>Publish your location and the temperature</b></div><br>
+	<div class="wrapper">
+		<button class="btn btn-success" onclick="getlocation()">Share my status</button><br><br>
+	</div>
 	<div id="location"></div><br>
 	<div id="map" style="width: 600px; height: 400px;"></div>
 	<script>
