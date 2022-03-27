@@ -3,6 +3,22 @@
 	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <style>
+
+	#smessage {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#subs {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	#connform {
+		margin-left: auto;
+		margin-right: auto;
+	}
+
 	#messages {
 		text-align: center;
 		margin-left: auto;
@@ -105,7 +121,8 @@
 	@import url('https://fonts.googleapis.com/css?family=Noto+Sans:400,400i,700,700i&subset=greek-ext');
 
 	body {
-  	margin: 0 auto;
+		margin-left: auto;
+		margin-right: auto;
 		background-position: center;
 		background-origin: content-box;
 		background-repeat: no-repeat;
@@ -145,7 +162,8 @@
 		position: absolute;
 		top: 0px;
 		left: 0px;
-		font-size: 16px;
+		font-size: 24px;
+		font-weight: bold;
 		color: rgb(134, 120, 120);
 		pointer-event: none;
 		transition: all 0.5s ease-in-out;
@@ -157,7 +175,7 @@
 		background: transparent;
 		width: 100%;
 		padding: 8px 0 5px 0;
-		font-size: 16px;
+		font-size: 24px;
 		color: rgb(8, 8, 8);
 	}
 
@@ -413,7 +431,7 @@
 	  Connection Status: Not Connected
 	</div>
 	<br>
-	<form name="connform" action="" onsubmit="return MQTTconnect()">
+	<form id="connform" name="connform" action="" onsubmit="return MQTTconnect()">
 		<div class="input-container">
 			<input type="text" name="server">
 			<label>Host</label>
@@ -428,10 +446,9 @@
 	</form>
 	<hr style="border-top: 2px dashed rgb(47, 0, 255);">
 	<br>
-	<form name="subs" action="" onsubmit="return sub_topics()">
+	<form id="subs" name="subs" action="" onsubmit="return sub_topics()">
 		<div class="input-container">
 			<input type="text" name="Stopic">
-			
 			<label>The topic to subscribe</label>
 		</div>
 
@@ -439,7 +456,7 @@
 	</form>
 	<hr style="border-top: 2px dashed rgb(47, 0, 255);">
 	<br>
-	<form name="smessage" action="" onsubmit="return send_message()">
+	<form id="smessage" name="smessage" action="" onsubmit="return send_message()">
 		<div class="input-container">
 			<input type="text" name="message">
 			<label>Message</label>
