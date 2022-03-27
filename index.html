@@ -4,10 +4,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <style>
 
+	.textboxes_lables {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+	}
+
 	.alerts {
 
 	}
-	
+
 	.wrapper {
 		margin-left: auto;
 		margin-right: auto;
@@ -119,6 +125,9 @@
 	}
 
 	.input-container label {
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
 		position: absolute;
 		top: 0px;
 		left: 0px;
@@ -394,11 +403,11 @@
 	<form id="connform" name="connform" action="" onsubmit="return MQTTconnect()">
 		<div class="input-container">
 			<input type="text" name="server">
-			<label>Host</label>
+			<label class="textboxes_lables">Host</label>
 		</div>
 		<div class="input-container">
 			<input type="text" name="port">
-			<label>Port</label>
+			<label class="textboxes_lables">Port</label>
 		</div>
 		<div id="wrapper">
 			<button type="submit" name="connect" class="btn btn-primary">Start</button>
@@ -409,7 +418,7 @@
 	<form id="subs" name="subs" action="" onsubmit="return sub_topics()">
 		<div class="input-container">
 			<input type="text" name="Stopic">
-			<label>The topic to subscribe</label>
+			<label class="textboxes_lables">The topic to subscribe</label>
 		</div>
 		<div id="wrapper">
 			<button type="submit" name="submit" value="Subscribe" class="btn btn-info">Subscribe</button><br><br>
@@ -419,11 +428,11 @@
 	<form id="smessage" name="smessage" action="" onsubmit="return send_message()">
 		<div class="input-container">
 			<input type="text" name="message">
-			<label>Message</label>
+			<label class="textboxes_lables">Message</label>
 		</div>
 		<div class="input-container">
 			<input type="text" name="Ptopic">
-			<label>Topic to publish to</label>
+			<label class="textboxes_lables">Topic to publish to</label>
 		</div>
 		<div id="wrapper">
 			<button class="btn btn-secondary" type="submit" value="Submit">Send</button><br><br>
