@@ -4,6 +4,16 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <style>
 
+	#map {
+		padding-left: -5%;
+		padding-right: -5%;
+		margin-left: auto;
+		margin-right: auto;
+		height: 100x;
+		width: 600px;
+		height: 400px;
+	}
+
 	.textboxes_lables {
 		margin-left: auto;
 		margin-right: auto;
@@ -80,12 +90,6 @@
 		font-weight: bold;
 		color: white;
 		line-height: 140%;
-	}
-
-	#map {
-		margin-left: auto;
-		margin-right: auto;
-		height: 100x;
 	}
 
 	body {
@@ -451,7 +455,7 @@
 		<button class="btn btn-success" onclick="getlocation()">Share my status</button><br><br>
 	</div>
 	<div id="location"></div><br>
-	<div id="map" style="width: 600px; height: 400px;"></div><br><br><br>
+	<div id="map"></div><br><br><br>
 	<script>
 		var map = L.map('map').setView([51.035999,	-114.066666], 10.3);
 
